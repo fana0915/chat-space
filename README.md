@@ -28,13 +28,13 @@ Things you may want to cover:
 
 |Column  |Type  |Options    |
 |--------|------|-----------|
-|username|string|null: false|
+|name    |string|null: false|
 |email   |string|null: false|
 |passowrd|string|null: false|
 
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :groups_users
 - has_many  :users,  through:  :groups_users
 
 
