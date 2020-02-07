@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-$header-Color: #ffffff;
-header{
-  color: $header-Color;
-}
 
 .side-bar{
   float: left;
@@ -46,6 +42,7 @@ header{
     }
   }
 }
+
 
 .chat-main{
   float: right;
