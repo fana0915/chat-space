@@ -21,10 +21,22 @@
   .chat-main__main-footer
     .chat-main__main-footer__form
       .chat-main__main-footer__form__type
-        type a massage
-        .chat-main__main-footer__form__type__icon
-          %label{class: "chat-main__main-footer__form__type__icon"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "hidden"}
-      .chat-main__main-footer__form__send
-        send
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'chat-main__main-footer__form__type', placeholder: 'type a message'
+          .chat-main__main-footer__form__type__icon
+            = f.label :image, class: 'chat-main__main-footer__form__type' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+          -# %label{class: "chat-main__main-footer__form__type__icon"}
+          -#   = icon('fas', 'image', class: 'icon')
+          -#   %input{type: "file", class: "hidden"}
+      = f.submit 'Send', class: 'form__submit'
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
