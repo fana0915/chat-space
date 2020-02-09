@@ -30,19 +30,27 @@
   &__group-list{
     height: calc(100vh - 100px);
     background-color:#2f3e51;
-    color: $header-Color;
-  
-    &__group-name{
-      font-size: 15px;
-      padding: 20px 5px 20px 20px;
+    padding: 20px 20px 0;
+    overflow: scroll;
+    &__group{
+      text-decoration:none;
+      margin-bottom: 40px;
+      color: $header-Color;
+      &__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
       &__commets{
-      font-size: 11px;
-      padding: 5px 40px 0 0;
+        font-size: 11px;
       }
     }
   }
 }
 
+.link{
+  text-decoration:none;
+  color: $header-Color;
+}
 
 .chat-main{
   float: right;
