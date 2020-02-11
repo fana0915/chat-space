@@ -41,6 +41,10 @@ group :development, :test do
   gem 'haml-rails'
   gem 'erb2haml'
   gem 'devise'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
