@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ChatSpace
   class Application < Rails::Application
+    config.time_zone = 'Tokyo'
     # 必要のないファイルの設定を変更して生成しないようにする
     config.generators do |g|
       g.stylesheets false
