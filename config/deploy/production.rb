@@ -62,4 +62,4 @@ server '18.178.143.140', user: 'ec2-user', roles: %w{app db web}
 #     # password: "please use keys"
 #   }
 
-config.consider_all_requests_local = true
+
